@@ -1,11 +1,15 @@
 const todos = [];
 
-function addTodo(task) {
-  todos.push(task);
+function addTodo(task, dueDate) {
+  todos.push({ task, dueDate: new Date(dueDate) });
 }
 
 function getTodos() {
   return todos;
 }
 
-module.exports = { addTodo, getTodos };
+function getSortedTodos() {
+  return [...todos].sort((a, b) => a.dueDate - b.dueDate);
+}
+
+module.exports = { addTodo, getTodos, getSortedTodos };
