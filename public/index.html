@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repo Functions Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global declaration for todos, as src/todo.js implicitly relies on it in a browser context -->
+    <script>var todos = [];</script>
+    <!-- Load existing repository functions -->
+    <script src="../src/calculator.js"></script>
+    <script src="../src/todo.js"></script>
+    <script src="../src/utils.js"></script>
+</head>
+<body>
+    <h1>Repository Functions Web Page</h1>
+
+    <section class="calculator">
+        <h2>Calculator</h2>
+        <input type="number" id="calcInput1" placeholder="Number 1">
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+        </select>
+        <input type="number" id="calcInput2" placeholder="Number 2">
+        <button id="calculateBtn">Calculate</button>
+        <p>Result: <span id="calcResult"></span></p>
+    </section>
+
+    <section class="todo-list">
+        <h2>Todo List</h2>
+        <input type="text" id="todoInput" placeholder="New task">
+        <button id="addTodoBtn">Add Todo</button>
+        <button id="getTodosBtn">Show Todos</button>
+        <ul id="todoListOutput"></ul>
+    </section>
+
+    <section class="utils">
+        <h2>Utilities</h2>
+        <input type="text" id="capitalizeInput" placeholder="Text to capitalize">
+        <button id="capitalizeBtn">Capitalize</button>
+        <p>Capitalized: <span id="capitalizeResult"></span></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
